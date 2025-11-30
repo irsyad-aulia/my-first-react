@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Counter() {
     const [count, setCount] = useState(0);
@@ -6,6 +6,9 @@ export default function Counter() {
     function handleClick() {
         setCount(count + 1);
     }
+useEffect(() => {
+    document.title = `Hitungan: ${count}`;
+}, [count]);
 
     return (
         <div className="flex flex-col items-center mt-8 p-6 bg-white rounded-lg shadow-md">

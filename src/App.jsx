@@ -1,32 +1,15 @@
-import Button from "./components/Button";
-import Counter from "./components/Counter";
+import UserList from "./components/UserList";
 
 function App() {
-  const menuButtons = [
-    "Login",
-    "Register",
-    "Logout",
-    "Profile",
-    "Settings"
-  ];
+return (
+  <div className="min-h-screen bg-gray-100 py-10">
+    <h1 className="text-center text-3xl font-bold text-blue-600 mb-10">
+      React Data Fetching (API)
+    </h1>
+    <UserList />
 
-  return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">
-        Elite React Rendering
-      </h1>
-
-      {/* 2. RENDERING OTOMATIS (Elite Way) */}
-      {/* "Untuk setiap 'text' di dalam ',menuButtons', buatkan satu <Button />" */}
-      <div className="flex gap-2 flex-wrap justify-center">
-        {menuButtons.map((text, index) => (
-          <Button key={index} text={text} />
-        ))}
-      </div>
-
-    <Counter />
-
-    </div>
-  );
+ </div>
+ );
 }
+
 export default App;

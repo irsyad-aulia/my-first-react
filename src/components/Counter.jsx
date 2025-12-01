@@ -7,7 +7,7 @@ export default function Counter() {
         setCount(count + 1);
     }
 useEffect(() => {
-    document.title = `Hitungan: ${count}`;
+    document.title = `count: ${count}`;
 }, [count]);
 
     return (
